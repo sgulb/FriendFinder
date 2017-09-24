@@ -1,0 +1,36 @@
+body {
+	background-image: url("./images/vintage-concrete.png");
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+nav {
+	height: 100px;
+}
+
+#head {
+	margin-top: 15px;
+	font-size: 48px;
+}
+
+#icon {
+	font-size: 64px;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.text {
+	font-size: 20px;
+}
+
+.go {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.input-field label {
+	font-size: 20px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder</title>
+	<!-- jQuery library link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Stylesheet reset link -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<!-- Compiled and minified CSS Materialize link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <!-- Materialize icon link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript Materialize link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<!-- Materialize navbar -->
+		<nav>
+			<div class="nav-wrapper teal">
+				<!-- Insert materialize icon and app name to header -->
+				<a href="#!" class="brand-logo center" id="head"><i class="material-icons" id="icon">people_outline</i>Friend Finder</a>
+			</div>
+		</nav>
+	</div>
+	<br>
+
+	<main>
+		<div class="container">
+			<!-- Grid layout for materialize card -->
+			<div class="row">
+				<div class="col s10 push-s1">
+					<!-- Create card, background color, and text color -->
+					<div class="card grey lighten-3">
+						<div class="card-content black-text">
+							<span class="card-title"><h2>Survey Questions</h2></span>
+							<hr>
+							<h4>About You</h4>
+							<!-- Create materialize form for survey questions -->
+							<div class="row">
+								<form class="col s12">
+									<div class="row">
+										<div class="input-field col s6">
+											<input placeholder="Your Name" id="name" type="text">
+											<label for="name" class="black-text">Name (Required)</label>
+										</div>
+										<div class="input-field col s6">
+											<input placeholder="Image Link" id="image" type="text">
+											<label for="image" class="black-text">Image Link (Required)</label>
+										</div>
+									</div>
+								</form>
+							</div>
+							<h4>Question 1</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="page-footer teal">
+          <div class="container">
+          	<!-- Grid layout for footer, text color, and text for left side of footer -->
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Friend Finder</h5>
+                <p class="grey-text text-lighten-4">Thanks for using the app!</p>
+                <p class="grey-text text-lighten-4">Built solely for educational purposes</p>
+              </div>
+              <!-- Offset to place link on right side of footer -->
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <!-- Footer links -->
+                <a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a> | <a class="grey-text text-lighten-3" href="https://github.com/sgulb">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 sGulb
+            </div>
+          </div>
+        </footer>
+</body>
+</html>
