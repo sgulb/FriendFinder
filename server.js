@@ -15,10 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-//Static directory
+// Static directory
 app.use(express.static(path.join(__dirname, "./app/public")));
 
-//Require routes
+// Require routes
 require(path.join(__dirname, "./app/routing/apiRoutes.js"))(app);
 require(path.join(__dirname, "./app/routing/htmlRoutes.js"))(app);
 

@@ -1,95 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Friend Finder</title>
-	<!-- jQuery library link -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<!-- Stylesheet reset link -->
-	<link rel="stylesheet" href="css/reset.css">
-
-	<!-- Compiled and minified CSS Materialize link -->
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- jQuery library link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Stylesheet reset link -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Compiled and minified CSS Materialize link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    
     <!-- Materialize icon link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- Compiled and minified JavaScript Materialize link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
     <!-- Stylesheet link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<!-- Materialize navbar -->
-		<nav>
-			<div class="nav-wrapper teal">
-				<!-- Insert materialize icon and app name to header -->
-				<a href="#!" class="brand-logo center" id="head"><i class="material-icons" id="icon">people_outline</i>Friend Finder</a>
-			</div>
-		</nav>
-	</div>
-	<br>
+    <div class="container">
 
-	<main>
-		<div class="container">
-			<!-- Grid layout for materialize card -->
-			<div class="row">
-				<div class="col s10 push-s1">
-					<!-- Create card, background color, and text color -->
-					<div class="card grey lighten-3">
-						<div class="card-content black-text">
-							<span class="card-title"><h2>Survey Questions</h2></span>
-							<hr>
-							<h4>About You</h4>
-							<!-- Create materialize form for survey questions -->
-							<div class="row">
-								<form class="col s12">
-									<div class="row">
-										<div class="input-field col s6">
-											<input placeholder="Your Name" id="name" type="text">
-											<label for="name" class="black-text">Name (Required)</label>
-										</div>
-										<div class="input-field col s6">
-											<input placeholder="Image Link" id="image" type="text">
-											<label for="image" class="black-text">Image Link (Required)</label>
-										</div>
-									</div>
-								</form>
-							</div>
-							<h4>Question 1</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+        <!-- Materialize navbar -->
+        <nav>
+            <div class="nav-wrapper teal">
 
-	<footer class="page-footer teal">
-          <div class="container">
-          	<!-- Grid layout for footer, text color, and text for left side of footer -->
+                <!-- Insert materialize icon and app name to header -->
+                <a href="/" class="brand-logo center" id="head"><i class="material-icons" id="icon">people_outline</i>Friend Finder</a>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <main>
+        <div class="container">
+
+            <!-- Grid layout for materialize card -->
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Friend Finder</h5>
-                <p class="grey-text text-lighten-4">Thanks for using the app!</p>
-                <p class="grey-text text-lighten-4">Built solely for educational purposes</p>
-              </div>
-              <!-- Offset to place link on right side of footer -->
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <!-- Footer links -->
-                <a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a> | <a class="grey-text text-lighten-3" href="https://github.com/sgulb">GitHub</a>
-              </div>
+                <div class="col s10 push-s1">
+
+                    <!-- Create card, background color, and text color -->
+                    <div class="card grey lighten-3">
+                        <div class="card-content black-text">
+                            <span class="card-title"><h2>Survey Questions</h2></span>
+                            <hr>
+                            <h4>About You</h4>
+
+                            <!-- Create materialize form for survey questions -->
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s6">
+                                            <input placeholder="Your Name" id="name" type="text">
+                                            <label for="name" class="black-text">Name (Required)</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <input placeholder="Image Link" id="image" type="text">
+                                            <label for="image" class="black-text">Image Link (Required)</label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <h4>Question 1</h4>
+
+                            <!-- Materialize form for first question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionOne">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>Your mind is always buzzing with unexplored ideas and plans.</label>
+                                </div>
+                            </div>
+                            <h4>Question 2</h4>
+
+                            <!-- Materialize form for second question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionTwo">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>Generally speaking, you rely more on your experience than your imagination.</label>
+                                </div>
+                            </div>
+                            <h4>Question 3</h4>
+
+                            <!-- Materialize form for third question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionThree">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                                </div>
+                            </div>
+                            <h4>Question 4</h4>
+
+                            <!-- Materialize form for fourth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionFour">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>You rarely do something just out of sheer curiosity.</label>
+                                </div>
+                            </div>
+                            <h4>Question 5</h4>
+
+                            <!-- Materialize form for fifth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionFive">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>People can rarely upset you.</label>
+                                </div>
+                            </div>
+                            <h4>Question 6</h4>
+
+                            <!-- Materialize form for sixth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionSix">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>It is often difficult for you to relate to other people’s feelings.</label>
+                                </div>
+                            </div>
+                            <h4>Question 7</h4>
+
+                            <!-- Materialize form for seventh question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionSeven">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>In a discussion, truth should be more important than people’s sensitivities.</label>
+                                </div>
+                            </div>
+                            <h4>Question 8</h4>
+
+                            <!-- Materialize form for eighth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionEight">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>You rarely get carried away by fantasies and ideas.</label>
+                                </div>
+                            </div>
+                            <h4>Question 9</h4>
+
+                            <!-- Materialize form for ninth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionNine">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>You think that everyone’s views should be respected.</label>
+                                </div>
+                            </div>
+                            <h4>Question 10</h4>
+
+                            <!-- Materialize form for tenth question -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="questionTen">
+                                        <option value="" disabled selected>Choose one</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Disagree)</option>
+                                        <option value="3">3 (Neutral)</option>
+                                        <option value="4">4 (Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                    <label>You feel more energetic after spending time with a group of people.</label>
+                                </div>
+                            </div>
+
+                            <!-- Survey submit button -->
+                            <button class="btn waves-effect waves-yellow" id="submit" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Copyright -->
-          <div class="footer-copyright">
+        </div>
+    </main>
+
+    <footer class="page-footer teal">
+        <div class="container">
+
+            <!-- Grid layout for footer, text color, and text for left side of footer -->
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Friend Finder App</h5>
+                    <p class="grey-text text-lighten-4">Thanks for participating!</p>
+                    <p class="grey-text text-lighten-4">Built solely for educational purposes</p>
+                </div>
+
+                <!-- Offset to place link on right side of footer -->
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+
+                    <!-- Footer links -->
+                    <a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a> | <a class="grey-text text-lighten-3" href="https://github.com/sgulb/FriendFinder">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
             <div class="container">
-            © 2017 sGulb
+                © 2017 sGulb
             </div>
-          </div>
-        </footer>
+        </div>
+    </footer>
+
+    <!-- Top match modal structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 id="matchName"></h4>
+            <hr>
+            <h5 id="nameH"></h5>
+            <img id="matchImage" class="materialboxed" width="650">
+        </div>
+        <div class="modal-footer">
+        <a href="/survey" class="modal-action modal-close waves-effect waves-yellow btn-flat">Take the survey again</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // Initialize plugin for materialize select form
+            $("select").material_select();
+
+            // Initialize plugin for materialboxed
+            $(".materialboxed").materialbox();
+
+            // Initialize plugin for modal
+            $(".modal").modal({
+
+                // Disable option to be able to close modal by clicking outside of it
+                dismissible: false,
+
+                // Default modal options
+                opacity: .5,
+                inDuration: 300,
+                outDuration: 200,
+                startingTop: "4%",
+                endingTop: "10%"
+            });
+        });
+
+        // Initialize event listener for clicking submit button
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+
+            // Object to grab user input and format json for the friends array
+            var userAnswers = {
+                name: $("#name").val().trim(),
+                image: $("#image").val().trim(),
+                answers:[
+                    $("#questionOne").val(),
+                    $("#questionTwo").val(),
+                    $("#questionThree").val(),
+                    $("#questionFour").val(),
+                    $("#questionFive").val(),
+                    $("#questionSix").val(),
+                    $("#questionSeven").val(),
+                    $("#questionEight").val(),
+                    $("#questionNine").val(),
+                    $("#questionTen").val()
+                ]
+            };
+            
+            // Post the user json object
+            $.post("/api/friends", userAnswers)
+            .done(function(data) {
+
+                console.log(data);                
+                
+                //Loop through user scores to get total score
+                // var scores = data.scores;
+                // var total = 0;
+                // for (var i = 0; i < scores.length; i++) {
+                //     total += parseInt(scores[i]);
+                // }
+
+                // Set match name and image for the modal
+                $("#matchName").html("Your top friend match");
+                $("#nameH").html(data.name);
+                $("#matchImage").attr("src", data.image);
+
+                // Open the modal
+                $("#modal1").modal("open");
+            });
+        });
+
+    </script>
 </body>
 </html>

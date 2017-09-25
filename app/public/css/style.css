@@ -1,36 +1,60 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
 body {
-	background-image: url("./images/vintage-concrete.png");
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+    background-image: url("./images/vintage-concrete.png");
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 nav {
-	height: 100px;
+    height: 100px;
 }
 
 #head {
-	margin-top: 15px;
-	font-size: 48px;
+    margin-top: 15px;
+    font-size: 48px;
 }
 
 #icon {
-	font-size: 64px;
+    font-size: 64px;
 }
 
 main {
-	flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .text {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .go {
-	margin-top: 10px;
-	margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .input-field label {
-	font-size: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.grey-text.text-lighten-3 {
+    text-decoration: underline;
+}
+
+.modal {
+    max-height: 85%;
+    width: 65%;
+    background-color: #eee;
+}
+
+.modal .modal-footer {
+    background-color: #eee;
+}
+
+.btn-flat:hover {
+    background-color: #009688;
+    color: white;
 }
